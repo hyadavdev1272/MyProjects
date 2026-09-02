@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Practice Aka Harsh Yadav</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<style>
+    @keyframes slideInFade {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+    }
+
+    body {
+        background-image: url('https://wallpaperaccess.com/full/8351171.gif');
+        background-size: contain;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        color: #ffffff;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+        font-size: clamp(16px, 1.5vw, 22px);
+        animation: slideInFade 1s ease-out forwards;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        margin: 10px auto;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+    }
+
+    img:hover {
+        transform: scale(1.05) rotate(2deg);
+        box-shadow: 0 10px 25px rgba(5, 102, 212, 0.9);
+    }
+
+    iframe {
+        width: 100%;
+        max-width: 100%;
+        height: 500px;
+        border-radius: 10px;
+        display: block;
+        margin: 10px auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    iframe:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 25px rgba(255, 99, 71, 0.7);
+    }
+
+    table, th, td {
+        border: 1px solid #ffffff;
+    }
+    
+    table {
+        border-spacing: 0;
+        border-collapse: collapse;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        backdrop-filter: blur(5px);
+        border-radius: 10px;
+        overflow: hidden;
+        transition: box-shadow 0.3s ease;
+        font-size: clamp(16px, 1.5vw, 22px);
+    }
+
+    table:hover {
+        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    tr:nth-child(even) {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    th, td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    th {
+        background-color: rgba(5, 102, 212, 0.7);
+    }
+
+    pre, .box {
+        text-align: center;
+        padding: 15px;
+        border-radius: 15px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: clamp(18px, 1.8vw, 24px);
+        font-weight: bolder;
+        white-space: pre-wrap;
+        overflow-x: auto;
+        background-color: rgba(0, 0, 0, 0.75); 
+        color: #ffffff;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(5px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    pre:hover, .box:hover {
+        transform: translateY(-8px);
+        background-color: rgba(0, 0, 0, 0.9);
+        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+    }
+
+    h1 {
+        text-align: center;
+        font-family: "Times New Roman", Times, serif;
+        font-size: clamp(32px, 4vw, 50px); 
+    }
+    
+    h2 {
+        font-size: clamp(26px, 3vw, 38px);
+    }
+
+    h3 {
+        font-size: clamp(22px, 2.5vw, 32px);
+    }
+
+    @keyframes pulseGlow {
+        0% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
+        50% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 20px rgba(5,102,212,1), 0 0 30px rgba(5,102,212,0.8); }
+        100% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
+    }
+
+    .main-heading {
+        color: #ffffff;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px;
+        border-radius: 10px;
+        display: inline-block;
+        width: 100%;
+        animation: pulseGlow 3s infinite alternate; 
+        transition: transform 0.3s ease;
+    }
+
+    .main-heading:hover {
+        transform: scale(1.02);
+    }
+
+    h2, h3 {
+        font-family: Arial, Helvetica, sans-serif;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+        transition: color 0.3s ease;
+    }
+
+    .city {
+        background-color: rgba(0, 0, 0, 0.7);
+        color: white;
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 20px;
+        margin: 20px 0;
+        padding: 20px;
+        backdrop-filter: blur(5px);
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .city:hover {
+        transform: translateY(-5px);
+        border-color: rgba(5, 102, 212, 0.8);
+    }
+
+    #myHeader, #myHeader1 {
+        background-color: rgba(5, 102, 212, 0.8);
+        color: white;
+        padding: 40px;
+        text-align: center;
+        border-radius: 15px;
+    }
+
+    .city1 {
+        background-color: rgba(255, 99, 71, 0.9);
+        color: white;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    a {
+        color: #66ccff;
+        font-weight: bold;
+        transition: color 0.3s ease, text-shadow 0.3s ease;
+    }
+    
+    a:hover {
+        color: #ffcc00;
+        text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+    }
+
+    button, .testbtn {
+        background-color: #04AA6D;
+        color: white;
+        font-size: clamp(16px, 1.5vw, 22px);
+        padding: 12px 20px;
+        border: 2px solid white;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        text-shadow: 1px 1px 2px black;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    button:hover, .testbtn:hover {
+        background-color: #059862;
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+    }
+
+    button:active {
+        transform: translateY(1px) scale(0.98);
+        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    }
+
+    div {
+        border-radius: 20px;
+        padding: 10px;
+    }
+
+    .custom-header, .custom-footer, .navbar {
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 2px solid rgba(5, 102, 212, 0.8);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .navbar {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: 10px;
+        position: sticky;
+        top: 0; 
+        z-index: 1000;
+        margin-bottom: 20px;
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 5px;
+        font-size: clamp(16px, 1.5vw, 20px);
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+        background-color: rgba(5, 102, 212, 0.6);
+        border-radius: 5px;
+        transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+        text-shadow: none;
+    }
+
+    .navbar a:hover {
+        background-color: rgba(5, 102, 212, 1);
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 5px 15px rgba(5, 102, 212, 0.6);
+    }
+
+    @media screen and (max-width: 768px) {
+        table { font-size: 14px; }
+        th, td { padding: 8px; }
+        iframe { height: 300px; }
+        pre, .box { font-size: 16px; padding: 10px; }
+        h1 { font-size: 28px; }
+        h2 { font-size: 24px; }
+        h3 { font-size: 20px; }
+    }
+</style>
+<body >
+    
+    <header class="custom-header">
+        <h1 class="main-heading" style="margin: 0; color: white;">Welcome to Harsh Yadav's Web_Pages</h1>
+    </header>
+
+    <nav class="navbar">
+        <a href="WebPagePrac.html" target="_blank">Go to Gaming World</a>
+        <a href="web page.html" target="_blank">Go to Dragon Ball</a>
+        <a href="WebPage_1.html" target="_blank">Go to My Site</a>
+        <a href="image gallery.HTML" target="_blank">Go to Image Gallery</a>
+        <a href="#myImage_1">JS_Bulb</a>
+        <a href="https://www.animeworld.com" target="_blank">Anime World</a>
+    </nav>
+
+    <h1 class="main-heading">CSS AKA Cascading Style Sheet</h1><hr>
+    <pre class="box">CSS is the language we use to style a Web page.
+CSS stands for Cascading Style Sheets
+CSS describes how HTML elements are to be displayed on screen, paper, or in other media
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+</pre>
+
+<h2 style="color:Tomato;">How To</h2><hr>
+<pre class="box"><strong>
+When a browser reads a style sheet, 
+it will format the HTML document according to the information in the style sheet.
+There are three ways of inserting a style sheet:
+
+External CSS - link to an external .css file
+Internal CSS - use the "style>" element in the head section
+Inline CSS - use the style attribute on HTML elements </strong></pre>
+<h3 style="color:MediumSeaGreen;">External CSS</h3><hr>
+<pre class="box">With an external style sheet, 
+    you can change the look of an entire website by changing just one file!
+Each HTML page must include a reference to the external style sheet file inside the link element, 
+inside the head section.
+An external style sheet can be written in any text editor, 
+and must be saved with a .css extension.
+
+The external .css file should not contain any HTML tags.
+
+Here is how the "mystyle.css" file looks:</pre>
+
+<h3 style="color:MediumSeaGreen;">Internal CSS</h3><hr>
+<pre class="box">An internal style sheet may be used if one single HTML page has a unique style.
+
+The internal style is defined inside the style> element, inside the head section.</pre>
+<h3 style="color:MediumSeaGreen;">Inline CSS</h3><hr>
+<pre class="box">
+An inline style may be used to apply a unique style for a single element.
+
+To use inline styles, add the style attribute to the relevant element. 
+The style attribute can contain any CSS property.
+</pre>
+
+<h2 style="color:Tomato;">CSS Common Errors</h2><hr>
+<pre class="box"><strong>1:Missing Semicolons</strong>
+<i>Forgetting a semicolon at the end of a property declaration can break the style rule.</i><br>
+<strong>2:Invalid Property Names</strong>
+<i>Using a property name that does not exist will simply be ignored by the browser.</i><br>
+<strong>3:Invalid Values</strong>
+<i>Correct properties but invalid values will also be ignored.</i><br>
+<strong>4:Unclosed Braces</strong>
+<i>If you forget to close a brace '}', the entire rule may be ignored.</i><br>
+<strong>5:Extra Colons or Braces</strong>
+<i>Typos like extra colons or misplaced braces can cause rules to break.</i><br>
+
+</pre>
+<h2 style="color:Tomato;">Tips to Avoid CSS Errors</h2><hr>
+<pre class="box">Use a code editor with syntax highlighting.
+Validate your CSS with a CSS linter or validator.
+Write CSS in small sections and test frequently.</pre><hr>
+<h1 class="main-heading">Image and Hyperlink Section Below:-</h1><hr>
+<img src="https://img.freepik.com/premium-vector/character-art-anime-style_961307-23577.jpg?w=360">
+<a href="https://www.animeworld.com">Visit Anime world</a>
+
+<img src="https://wallpapercave.com/uwp/uwp4477794.jpeg">
+<a href="https://wallpapercave.com/"  target="_blank">Visit WallpaperCave</a><br>
+<hr>
+<h1 class="main-heading">HTML Clickable_Gif</h1><hr>
+<a href="https://hianimes.se/">
+<img src="https://i.pinimg.com/originals/26/93/a8/2693a8de43adf177b30f1ac3fb3b14e2.gif" alt="Anime tutorial">
+</a>
+<a href="https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki">
+<img src="https://giffiles.alphacoders.com/221/221754.gif" style="max-height: 420px; object-fit: cover;"></a>
+<br>
+<h1 class="main-heading">HTML Table Practice</h1><hr>
+<table style="width:100%">
+    <caption>Harsh Enterprises</caption>
+    <tr>
+        <th colspan="2">Company</th>
+        <th>Country</th>
+    </tr>
+    <tr style="height:50px">
+        <td rowspan="2">Alfreds Futterkiste</td>
+        <td>Harsh Futterkiste</td>
+        <td>Germany</td>
+    </tr>
+    <tr style="height:50px">
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+    <tr style="height:50px">
+        <td>Kamal Futterkiste</td>
+        <td>Karan kiste</td>
+        <td>Ukraine</td>
+    </tr>
+     <tr style="height:50px">
+        <td>Aman Futter</td>
+        <td>Ujjwal Pisten</td>
+        <td>USSR</td>
+    </tr>
+</table><br><hr>
+<h1 class="main-heading">HTML List Practice</h1><hr>
+<h2 style="color:Tomato;">HTML Ordered Lists</h2><hr>
+<ol>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ol>
+<br>
+<h3>Nested HTML Lists</h3>
+<hr>
+<ol>
+  <li>Coffee</li>
+  <li>Tea
+    <ol>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ol>
+  </li>
+  <li>Milk</li>
+</ol>
+<br>
+<h3 style="color:MediumSeaGreen;">Types Of Ways To Use Ordered Lists</h3><hr>
+<pre class="box">
+    Type=1 is Numbers:
+    Type='A' is Uppercase Letters:
+    Type='a' is Lowercase Letters:
+    Type='I' is Uppercase Roman Numbers:
+    Type='i' is Lowercase Roman Numbers:
+    Start="50" to start counting from a specified number:
+</pre><br><hr>
+<h2 style="color:Tomato;">HTML Unordered Lists</h2><hr>
+<ul>
+  <li>Coffee</li>
+  <li>Tea</li>
+  <li>Milk</li>
+</ul>
+<br>
+<h3>Nested HTML Lists</h3>
+<hr>
+<ul>
+  <li>Coffee</li>
+  <li>Tea
+    <ul>
+      <li>Black tea</li>
+      <li>Green tea</li>
+    </ul>
+  </li>
+  <li>Milk</li>
+</ul>
+<h3 style="color:MediumSeaGreen;">Types Of Ways To Use Unordered Lists</h3><hr>
+<pre class="box">
+    style="list-style-type:circle;
+    style="list-style-type:square;
+    style="list-style-type:none;
+</pre><br><hr>
+
+<h2 style="color:Tomato;">HTML Description Lists</h2><hr>
+<dl>
+  <dt>Coffee</dt>
+  <dd>- black hot drink</dd>
+  <dt>Milk</dt>
+  <dd>- white cold drink</dd>
+</dl>
+<br><hr>
+<h3 style="color:MediumSeaGreen;">Summary of HTML Description Lists</h3><hr>
+<pre class="box">
+    Use the HTML Dl> element to define a description list.
+    Use the HTML Dt> element to define the description term.
+    Use the HTML Dd> element to describe the term in a description list.
+</pre>
+<br>
+<hr>
+<h1 class="main-heading">HTML DIV Element</h1><hr>
+<pre class="box">The div element is used as a container for other HTML elements.</pre>
+<br>
+<div style="width:100%;margin:auto;">
+<h2 style="color:Tomato;">London</h2>
+<pre class="box">
+    London is the capital of England.
+    London has over 9 million inhabitants.
+</pre>
+</div>
+<hr>
+<br>
+<h1 class="main-heading">HTML Class Attributes</h1><hr>
+<pre class="box">
+    The HTML class attribute is used to specify a class for an HTML element.
+    Multiple HTML elements can share the same class.
+
+    The class attribute is often used to point to a class name in a style sheet. 
+    It can also be used by JavaScript to access and manipulate elements with the specific class name.
+
+    In the following example we have three Div elements with a class attribute with the value of "city". 
+    All of the three Div elements will be styled equally according to the .city style definition in the head section:
+</pre>
+<br>
+<hr>
+<div class="city">
+  <h2>London</h2>
+  <p>London is the capital of England.</p>
+</div>
+
+<div class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital of France.</p>
+</div>
+
+<div class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
+<br><hr>
+<h2 style="color:Tomato;">Multiple Classes</h2>
+<pre class="box">
+    HTML elements can belong to more than one class.
+
+    To define multiple classes, separate the class names with a space, e.g. Div class="city main". 
+    The element will be styled according to all the classes specified.
+
+    In the following example, the first h2 element belongs to both the city class and also to the main class, 
+    and will get the CSS styles from both of the classes: 
+</pre>
+<hr>
+<h2 style="color:Tomato;">Different Elements Can Share Same Class</h2>
+<br>
+<pre class="box">
+    Different HTML elements can point to the same class name.
+    In the following example, both h2 and p point to the "city" class and will share the same style:
+</pre>
+<h2 style="color:Tomato;">Summary of Class Attribute</h2>
+<pre class="box">
+The HTML class attribute specifies one or more class names for an element.
+Classes are used by CSS and JavaScript to select and access specific elements.
+The class attribute can be used on any HTML element.
+The class name is case sensitive.
+Different HTML elements can point to the same class name.
+JavaScript can access elements with a specific class name with the getElementsByClassName() method.
+
+Tip: The class attribute can be used on any HTML element.
+Note: The class name is case sensitive!
+</pre>
+<hr>
+<h2 style="color:Tomato;">Use of the class Attribute in JavaScript</h2>
+<pre class="box">
+    The class name can also be used by JavaScript to perform certain tasks for specific elements.
+
+    JavaScript can access elements with a specific class name with the getElementsByClassName() method:
+</pre>
+<br><hr>
+<div>
+<h2 style="color:Tomato;">Use of The class Attribute in JavaScript</h2>
+<p>Click the button to hide all elements with class name "city":</p>
+
+<button onclick="myFunction3()">Hide elements</button>
+
+<h2 style="color:Tomato;" class="city">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 style="color:Tomato;" class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 style="color:Tomato;" class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<script>
+function myFunction3() {
+  var x = document.getElementsByClassName("city");
+  for (var i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+}
+</script>
+</div>
+<br><hr>
+<h1 class="main-heading">HTML id Attribute</h1><hr>
+<pre class="box">
+    The HTML id attribute is used to specify a unique id for an HTML element.
+
+    You cannot have more than one element with the same id in an HTML document.
+    The id attribute specifies a unique id for an HTML element. 
+    The value of the id attribute must be unique within the HTML document.
+
+    The id attribute is used to point to a specific style declaration in a style sheet. 
+    It is also used by JavaScript to access and manipulate the element with the specific id.
+
+    The syntax for id is: write a hash character (#), followed by an id name. 
+    Then, define the CSS properties within curly braces {}.
+
+    In the following example we have an h1 element that points to the id name "myHeader". 
+    This h1 element will be styled according to the #myHeader style definition in the head section:
+</pre>
+<br>
+<hr>
+<h1 id="myHeader">My Header</h1>
+<br><hr>
+<h1 class="main-heading">Difference Between Class and ID</h1><hr>
+<pre class="box">
+    A class name can be used by multiple HTML elements, 
+    while an id name must only be used by one HTML element within the page:
+</pre>
+<br><hr>
+
+<h1 id="myHeader1">My Cities</h1>
+
+<h2 class="city1">London</h2>
+<p>London is the capital of England.</p>
+
+<h2 class="city1">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city1">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+
+<h2 style="color:Tomato;">Summary of ID Attribute</h2>
+<pre class="box">
+The id attribute is used to specify a unique id for an HTML element
+The value of the id attribute must be unique within the HTML document
+The id attribute is used by CSS and JavaScript to style/select a specific element
+The value of the id attribute is case sensitive
+The id attribute is also used to create HTML bookmarks
+JavaScript can access an element with a specific id with the getElementById() method
+
+Note: The id name is case sensitive!
+Note: The id name must contain at least one character, cannot start with a number, 
+and must not contain whitespaces (spaces, tabs, etc.).
+</pre>
+<br><hr>
+<h2 style="color:Tomato;">HTML Bookmarks with ID and Links</h2>
+<pre class="box">
+HTML bookmarks are used to allow readers to jump to specific parts of a webpage.
+Bookmarks can be useful if your page is very long.
+
+To use a bookmark, you must first create it, and then add a link to it.
+Then, when the link is clicked, the page will scroll to the location with the bookmark.</pre>
+<div>
+<p><a href="#C4">Jump to Chapter 4</a></p>
+<p><a href="#C10">Jump to Chapter 10</a></p>
+
+<h2>Chapter 1</h2>
+<p>This chapter explains ba bla bla</p>
+<h2 id="C4">Chapter 4</h2>
+<p>This chapter explains ba bla bla</p>
+<h2 id="C10">Chapter 10</h2>
+<p>This chapter explains ba bla bla</p>
+
+</div>
+<br><hr>
+<h2 style="color:Tomato;">Using the id Attribute in JavaScript</h2>
+<pre class="box">
+The id attribute can also be used by JavaScript to perform some tasks for that specific element.
+JavaScript can access an element with a specific id with the getElementById() method:
+</pre>
+<div>
+<pre class="box">JavaScript can access an element with a specified id by using the getElementById() method:</pre>
+
+<h1 id="myHeader2">Hello World!</h1>
+<button onclick="displayResult()">Change text</button>
+
+<script>
+function displayResult() {
+  document.getElementById("myHeader2").innerHTML = "Have a nice day!";
+}
+</script>
+</div>
+<br><hr>
+<h1 class="main-heading">HTML Button</h1><hr>
+<pre class="box">
+    Buttons let users interact with a web page. They can submit forms, run JavaScript, or trigger different actions when clicked.
+
+    The HTML Button element defines a clickable button.
+    By itself, the button does nothing until you add an action to it.
+</pre>
+<p>This is a basic HTML button. It can be clicked, but it will not do anything until you add an action to it.</p>
+
+<button>Click Me</button>
+<br><hr>
+<h1 class="main-heading">HTML Buttons</h1><hr>
+
+<p>Default button with no styling:</p>
+<button>Click me</button>
+
+<p>Styled button:</p>
+<button class="testbtn">Green Button</button><br><hr>
+
+<p>A disabled button is unclickable:</p>
+<button disabled>Disabled Button</button>
+<br><hr>
+<h1 class="main-heading">HTML Button with JavaScript</h1>
+<p>The button uses the <code>onclick</code> attribute to run JavaScript. When you click the button, it shows an alert message.</p>
+
+<button onclick="alert ('Hello!This is Harsh Yadav Web Page....')">Click Me</button>
+<br><hr>
+<h1 class="main-heading">HTML Buttons Types</h1>
+<hr>
+<button type="button">Normal Button</button>
+<button type="submit">Submit</button>
+<button type="reset">Reset</button>
+<br>  <hr>
+<h1 class="main-heading">Reset Button inside the form</h1>
+<p>The submit button sends the form data to the server, and the reset button clears the form field (try to type your first name and press Reset Form).</p>
+<form action="Main.php">
+  First name: <input type="text" name="fname"><br><br>
+
+  <button type="submit">Submit Form</button>
+  <button type="reset">Reset Form</button>
+</form>
+<br><hr>
+<h1 class="main-heading">HTML Iframes</h1><hr>
+<iframe src="https://thumbs.dreamstime.com/b/anime-cartoon-character-male-vector-art-illustration-stylish-expressive-design-has-sharp-style-hair-bold-facial-384511590.jpg "  title="Anime Image"></iframe>
+<iframe src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" style="border:10px solid rgba(32, 31, 31, 0.699);" title="Nature Image"></iframe>
+<br>
+<hr>
+<br>
+<iframe src="https://lh3.googleusercontent.com/4fEeStc2A96KDNKLXEM6XadjUH9EVDkVJ1-ntfOLYFnD8qf6pRsNj69HQF9YbDYQ1EtfcbmJ6QYbXBEFlJMqW3wMKA=s1280-w1280-h800" name="iframe_a" title="Website Anime"></iframe>
+<p><a href="https://www.crunchyroll.com/?" target="iframe_a">crunchyroll</a></p>
+<br><hr>
+<h1 class="main-heading">HTML JAVASCRIPT</h1><hr>
+<pre class="box">JavaScript makes HTML pages more dynamic and interactive.</pre>
+<br><hr>
+<h2 style="color:Tomato;">My First JavaScript</h2>
+
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to display Date and Time.</button>
+
+<pre id="demo" class="box"></pre>
+<br><hr>
+<h2 style="color:Tomato;">The HTML Script> Tag</h2>
+<pre class="box">
+    The HTML Script> tag is used to define a client-side script (JavaScript).
+
+    The Script> element either contains script statements, 
+    or it points to an external script file through the src attribute.
+
+    Common uses for JavaScript are image manipulation, form validation, 
+    and dynamic changes of content.
+
+    To select an HTML element, JavaScript most often uses the document.getElementById() method.
+    This JavaScript example writes "Hello JavaScript!" into an HTML element with id="demo":
+</pre>
+<br><hr>
+
+<h1 class="main-heading">A Taste of JavaScript</h1><hr>
+<div>
+<pre class="box">
+<p>JavaScript can change the content of an HTML element:</p>
+
+<button type="button" onclick="myFunction()">Click_Me!</button>
+
+<p id="demo1">This is a demonstration of Text Change using JS...</p>
+<script>
+function myFunction() { 
+  document.getElementById("demo1").innerHTML = "Hello JavaScript!";
+}
+</script>
+</pre>
+</div>
+<br><hr>
+<div >
+    <pre class="box">
+<p id="demo3">JavaScript can change the style of an HTML element.</p>
+<script>
+function myFunction2() {
+  document.getElementById("demo3").style.fontSize = "25px";
+  document.getElementById("demo3").style.color = "cyan";
+  document.getElementById("demo3").style.backgroundColor = "blue";
+}
+</script>
+
+<button type="button" onclick="myFunction2()">Click Me!</button>
+</pre>
+</div>
+<br><hr>
+<div id="myImage_1">
+    <pre class="box">
+    <p>Here, a JavaScript changes the value of the src (source) attribute of an image.</p>
+
+<script>
+function light(sw) {
+  var pic;
+  if (sw == 0) {
+    pic = "https://www.w3schools.com/js/pic_bulboff.gif";
+  } else {
+    pic = "https://www.w3schools.com/js/pic_bulbon.gif";
+  }
+  document.getElementById('myImage').src = pic;
+}
+</script>
+
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
+
+<p>
+<button type="button" onclick="light(1)">Light On</button>
+<button type="button" onclick="light(0)">Light Off</button>
+</p>
+</pre>
+</div>
+<br><hr>
+<h1 class="main-heading">Important HTML Head Summary Points To Look At...</h1><hr>
+<pre class="box">
+The |head> element is a container for metadata (data about data)...
+The |head> element is placed between the <html> tag and the <body> tag...
+The |title> element is required and it defines the title of the document...
+The |style> element is used to define style information for a single document...
+The |link> tag is most often used to link to external style sheets...
+The |meta> element is typically used to specify the character set, 
+page description, keywords, author of the document, and viewport settings...
+The |script> element is used to define client-side JavaScripts...
+The |base> element specifies the base URL and/or target for all relative URLs in a page...
+</pre>
+<br>
+<table style="width:100%">
+    <caption><strong>HTML HEAD.</strong></caption>
+    <hr>
+    <tr>
+        <th>Tag</th>
+        <th>Description</th>
+    </tr>
+    <tr style="height:50px">
+        <td>|Head|</td>
+        <td>Defines information about the document.</td>
+    </tr>
+    <tr style="height:50px">
+        <td>|Title|</td>
+        <td>Defines the title of a document.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Base|</td>
+        <td>Defines a default address or a default target for all links on a page.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Link|</td>
+        <td>Defines the relationship between a document and an external resource.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Meta|</td>
+        <td>Defines metadata about an HTML document.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Script|</td>
+        <td>Defines a client-side script.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Style|</td>
+        <td>Defines style information for a document.</td>
+    </tr>
+</table><br><hr>
+<h1 class="main-heading">HTML Computer Code Elements</h1><hr>
+<pre class="box">HTML contains several elements for defining user input and computer code.
+The |kbd| element defines keyboard input.
+The |samp| element defines sample output from a computer program.
+The |code| element defines a piece of computer code.
+The |var| element defines a variable in programming or in a mathematical expression.
+The |pre| element defines preformatted text.
+</pre>
+<br><hr>
+<table style="width:100%">
+    <caption><strong>HTML Computer Code Elements.</strong></caption>
+    <tr>
+        <th>Tag</th>
+        <th>Description</th>
+    </tr>
+    <tr style="height:50px">
+        <td>|Code|</td>
+        <td>Defines programming code.</td>
+    </tr>
+    <tr style="height:50px">
+        <td>|Kbd|</td>
+        <td>Defines keyboard input.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Samp|</td>
+        <td>Defines computer output.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Var|</td>
+        <td>Defines a variable.</td>
+    </tr>
+        <tr style="height:50px">
+        <td>|Pre|</td>
+        <td>Defines preformatted text.</td>
+    </tr>
+</table><br><hr>
+
+<h2 style="color:Tomato;">HTML |kbd| For Keyboard Input</h2>
+<pre class="box">
+    The HTML |kbd| element is used to define keyboard input. 
+    The content inside is displayed in the browser's default monospace font.
+    <br>
+    The kbd element is used to define keyboard input:
+    Save the document by pressing |kbd|Ctrl + S|kbd|
+</pre>
+<br><hr>
+<h2 style="color:Tomato;">HTML |samp| For Program Output</h2>
+<pre class="box">
+    The HTML |samp| element is used to define sample output from a computer program. 
+    The content inside is displayed in the browser's default monospace font.
+    <br>
+    The samp element is used to define sample output from a computer program:
+    Message from my computer:
+    |samp|File not found.<br>Press F1 to continue|/samp|
+</pre>
+<br> <hr>
+<h2 style="color:Tomato;">HTML |code| For Computer Code</h2>
+<pre class="box">
+The HTML |code| element  is used to define a piece of computer code. 
+The content inside is displayed in the browser's default monospace font.
+<br>
+The code Element
+Programming code example:
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+<br> <hr>
+<h2 style="color:Tomato;">Preserve Line-Breaks</h2>
+<pre class="box">
+Notice that the |code|element does NOT preserve extra whitespace and line-break.
+To preserve extra whitespace and line-breaks, you can put the |code|element inside a |pre|element:
+
+The code element does not preserve whitespace and line-breaks.
+To fix this, you can fix put the code element inside a pre element:
+<div>
+<pre>
+<code>
+x = 5;
+y = 6;
+z = x + y;
+</code>
+</pre>
+</div>
+</pre>
+<br> <hr>
+<h2 style="color:Tomato;">HTML |var| For Variables</h2>
+<pre class="box">
+The HTML &lt;var&gt; element is used to define a variable in programming or in a mathematical expression.
+The content inside is typically displayed in italic.
+
+The area of a triangle is: 1/2 x &lt;var&gt;b&lt;/var&gt; x &lt;var&gt;h&lt;/var&gt;, where &lt;var&gt;b&lt;/var&gt; is the base, and &lt;var&gt;h&lt;/var&gt; 
+is the vertical height.
+</pre>
+    
+    <footer class="custom-footer">
+        <p style="margin: 0; font-family: Arial, Helvetica, sans-serif;">&copy; 2026 Harsh Yadav. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

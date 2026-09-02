@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Assignment webpage...</title>
+<style>
+    * { 
+        margin: 0; 
+        padding: 0; 
+        box-sizing: border-box; 
+        font-family: sans-serif; 
+    }
+    
+    body { display: flex; flex-direction: column; min-height: 100vh; }
+    
+    header { 
+        background: #000; 
+        color: #fff; 
+        display: flex; 
+        justify-content: space-between; 
+        padding: 15px 50px; 
+        align-items: center; 
+    }
+    
+
+    header b { 
+        font-size: 20px; 
+        display: flex;
+        align-items: center; 
+    }
+    
+
+    header b img { 
+        width: 24px; 
+        height: 24px;
+        margin-right: 8px;
+        border: 2px solid #fff; 
+        border-radius: 4px; 
+        padding: 2px; 
+    }
+    
+  
+    nav {
+        display: flex;
+        align-items: center;
+    }
+
+    nav a { 
+        color: #ddd; 
+        text-decoration: none; 
+        margin: 0 15px; 
+        font-weight: bold; 
+        font-size: 14px; 
+    }
+    nav a:hover { color: #fff; }
+    
+    nav img { 
+        width: 18px; 
+        height: 18px; 
+        margin-left: 10px; 
+        cursor: pointer; 
+    }
+    
+    main { 
+        flex: 1; 
+        background: linear-gradient(#2d3450b3, #2d3450b3), url('https://images.unsplash.com/photo-1498050108023-c5249f4df085') center/cover; 
+        display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; 
+    }
+    
+    h1 { font-size: 55px; margin-bottom: 20px; }
+    p { font-size: 18px; margin-bottom: 30px; line-height: 1.5; }
+    
+    button { 
+        background: #4a90e2; 
+        color: #fff; 
+        padding: 15px 30px; 
+        font-weight: bold; 
+        border: none; 
+        cursor: pointer; 
+        text-transform: uppercase;
+    }
+    button:hover { background: #357abd; }
+    
+    .bottom-line { height: 10px; background: #4a90e2; }
+</style>
+</head>
+<body>
+
+    <header>
+        <b>
+        
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkVexxzbg3jvRGCioSPljjTfsjn7CWC45h3L40QZwXjQ&s=10" alt="Shield Icon"> My Site
+        </b>
+        <nav>
+            <a href="#">About</a> 
+            <a href="#">Services</a> 
+            <a href="#">Contacts</a>
+            
+           
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJRxyUuUTxu3GTYrI1xJm00EJxwBh0tLfdUQnGgkdZ-A&s=10" alt="Twitter">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1SBC_sjPTvnzNgO8gsHTxsWvss9tSOlmEo0-khVFPLg&s=10" alt="Facebook">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcRITsKS0PEMC132U7VtPeIHoyBqwqPMItGHEm7ZvOCg&s=10" alt="LinkedIn">
+        </nav>
+    </header>
+
+    <main>
+        <h1>Harsh Yadav<br>BUILDER</h1>
+        <p>Welcome to our site! We help you build great things online fast.<br>Take a look at our work or get in touch today.<br>Have a nice browsing.</p>
+        <button>Book a Visit</button>
+    </main>
+
+    <div class="bottom-line"></div>
+
+</body>
+</html>
