@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <style>
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            font-family:cursive, sans-serif;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            COLOR: #d30d0d9a;
+            margin-bottom: 30px;
+            letter-spacing: 2px;
+
+
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .column {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .gallery img {
+            width: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>IMAGE GALLERY</h1>
+
+    <div class="gallery">
+        <div class="column">
+            <img src="https://i.pinimg.com/236x/01/cc/f6/01ccf622e8440ebe1305ffcfc242dd3a.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/47/ce/0f/47ce0fdfe771286229faa043b47cd2cd.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/170x/de/bb/36/debb36be737576e6563ec3a3dd40b2c9.jpg" width="250" height="150" alt="Gallery Art">
+        </div>
+
+        <div class="column">
+            <img src="https://i.pinimg.com/550x/53/86/2f/53862f81e88a1425c34df907d8f22876.jpg" width="250" height="150" alt="Gallery Art">
+            <img src="https://i.pinimg.com/736x/32/1f/4a/321f4a1ab7f820af61386b23bc9cfe9c.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/2f/fb/85/2ffb859167afb3b68ebb68f74ff9b28f.jpg" width="250" height="300" alt="Gallery Art">
+        </div>
+
+        <div class="column">
+            <img src="https://i.pinimg.com/474x/66/24/97/66249779aeed22f0e58ae33cd9d41c82.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/01/cc/f6/01ccf622e8440ebe1305ffcfc242dd3a.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/550x/53/86/2f/53862f81e88a1425c34df907d8f22876.jpg" width="250" height="150" alt="Gallery Art">
+        </div>
+
+        <div class="column">
+            <img src="https://i.pinimg.com/736x/32/1f/4a/321f4a1ab7f820af61386b23bc9cfe9c.jpg" width="250" height="150" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/2f/fb/85/2ffb859167afb3b68ebb68f74ff9b28f.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/47/ce/0f/47ce0fdfe771286229faa043b47cd2cd.jpg" width="250" height="300" alt="Gallery Art">
+        </div>
+
+        <div class="column">
+            <img src="https://i.pinimg.com/550x/53/86/2f/53862f81e88a1425c34df907d8f22876.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/736x/32/1f/4a/321f4a1ab7f820af61386b23bc9cfe9c.jpg" width="250" height="300" alt="Gallery Art">
+            <img src="https://i.pinimg.com/236x/2f/fb/85/2ffb859167afb3b68ebb68f74ff9b28f.jpg" width="250" height="150" alt="Gallery Art">
+        </div>
+    </div>
+
+</body>
+</html>
