@@ -5,281 +5,281 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML_Page Aka Harsh Yadav</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        @keyframes slideInFade {
+            0% { opacity: 0; transform: translateY(30px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        body {
+            background-image: url('https://wallpaperaccess.com/full/8351171.gif');
+            background-size: contain;
+            background-attachment: fixed;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
+            font-size: clamp(16px, 1.5vw, 22px);
+            animation: slideInFade 1s ease-out forwards;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.05) rotate(2deg);
+            box-shadow: 0 10px 25px rgba(5, 102, 212, 0.9);
+        }
+
+        iframe {
+            width: 100%;
+            max-width: 100%;
+            height: 500px;
+            border-radius: 10px;
+            display: block;
+            margin: 10px auto;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        iframe:hover {
+            transform: scale(1.02);
+            box-shadow: 0 10px 25px rgba(255, 99, 71, 0.7);
+        }
+
+        table, th, td {
+            border: 1px solid #ffffff;
+        }
+        
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: box-shadow 0.3s ease;
+            font-size: clamp(16px, 1.5vw, 22px);
+        }
+
+        table:hover {
+            box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+        }
+
+        tr:nth-child(even) {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: center;
+        }
+
+        th {
+            background-color: rgba(5, 102, 212, 0.7);
+        }
+
+        pre, .box {
+            text-align: center;
+            padding: 15px;
+            border-radius: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: clamp(18px, 1.8vw, 24px);
+            font-weight: bolder;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            background-color: rgba(0, 0, 0, 0.75); 
+            color: #ffffff;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        pre:hover, .box:hover {
+            transform: translateY(-8px);
+            background-color: rgba(0, 0, 0, 0.9);
+            box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
+        }
+
+        h1 {
+            text-align: center;
+            font-family: "Times New Roman", Times, serif;
+            font-size: clamp(32px, 4vw, 50px); 
+        }
+        
+        h2 {
+            font-size: clamp(26px, 3vw, 38px);
+        }
+
+        h3 {
+            font-size: clamp(22px, 2.5vw, 32px);
+        }
+
+        @keyframes pulseGlow {
+            0% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
+            50% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 20px rgba(5,102,212,1), 0 0 30px rgba(5,102,212,0.8); }
+            100% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
+        }
+
+        .main-heading {
+            color: #ffffff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            width: 100%;
+            animation: pulseGlow 3s infinite alternate; 
+            transition: transform 0.3s ease;
+        }
+
+        .main-heading:hover {
+            transform: scale(1.02);
+        }
+
+        h2, h3 {
+            font-family: Arial, Helvetica, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+            transition: color 0.3s ease;
+        }
+
+        .city {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            margin: 20px 0;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .city:hover {
+            transform: translateY(-5px);
+            border-color: rgba(5, 102, 212, 0.8);
+        }
+
+        #myHeader, #myHeader1 {
+            background-color: rgba(5, 102, 212, 0.8);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .city1 {
+            background-color: rgba(255, 99, 71, 0.9);
+            color: white;
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        a {
+            color: #66ccff;
+            font-weight: bold;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+        
+        a:hover {
+            color: #ffcc00;
+            text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
+        }
+
+        button, .testbtn {
+            background-color: #04AA6D;
+            color: white;
+            font-size: clamp(16px, 1.5vw, 22px);
+            padding: 12px 20px;
+            border: 2px solid white;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px black;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.5);
+            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        button:hover, .testbtn:hover {
+            background-color: #059862;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.6);
+        }
+
+        button:active {
+            transform: translateY(1px) scale(0.98);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        div {
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        .custom-header, .custom-footer, .navbar {
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(5, 102, 212, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(8px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px;
+            position: sticky;
+            top: 0; 
+            z-index: 1000;
+            margin-bottom: 20px;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 5px;
+            margin: 5px;
+            font-size: clamp(16px, 1.5vw, 20px);
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgba(5, 102, 212, 0.6);
+            border-radius: 5px;
+            transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
+            text-shadow: none;
+        }
+
+        .navbar a:hover {
+            background-color: rgba(5, 102, 212, 1);
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 5px 15px rgba(5, 102, 212, 0.6);
+        }
+
+        @media screen and (max-width: 768px) {
+            table { font-size: 14px; }
+            th, td { padding: 8px; }
+            iframe { height: 300px; }
+            pre, .box { font-size: 16px; padding: 10px; }
+            h1 { font-size: 28px; }
+            h2 { font-size: 24px; }
+            h3 { font-size: 20px; }
+        }
+    </style>
 </head>
-<style>
-    @keyframes slideInFade {
-        0% { opacity: 0; transform: translateY(30px); }
-        100% { opacity: 1; transform: translateY(0); }
-    }
-
-    body {
-        background-image: url('https://wallpaperaccess.com/full/8351171.gif');
-        background-size: contain;
-        background-attachment: fixed;
-        margin: 0;
-        padding: 10px;
-        box-sizing: border-box;
-        color: #ffffff;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9);
-        font-size: clamp(16px, 1.5vw, 22px);
-        animation: slideInFade 1s ease-out forwards;
-    }
-
-    * {
-        box-sizing: border-box;
-    }
-
-    img {
-        max-width: 100%;
-        height: auto;
-        display: block;
-        margin: 10px auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
-    }
-
-    img:hover {
-        transform: scale(1.05) rotate(2deg);
-        box-shadow: 0 10px 25px rgba(5, 102, 212, 0.9);
-    }
-
-    iframe {
-        width: 100%;
-        max-width: 100%;
-        height: 500px;
-        border-radius: 10px;
-        display: block;
-        margin: 10px auto;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
-        transition: transform 0.4s ease, box-shadow 0.4s ease;
-    }
-
-    iframe:hover {
-        transform: scale(1.02);
-        box-shadow: 0 10px 25px rgba(255, 99, 71, 0.7);
-    }
-
-    table, th, td {
-        border: 1px solid #ffffff;
-    }
-    
-    table {
-        border-spacing: 0;
-        border-collapse: collapse;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.6);
-        backdrop-filter: blur(5px);
-        border-radius: 10px;
-        overflow: hidden;
-        transition: box-shadow 0.3s ease;
-        font-size: clamp(16px, 1.5vw, 22px);
-    }
-
-    table:hover {
-        box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
-    }
-
-    tr:nth-child(even) {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    th, td {
-        padding: 15px;
-        text-align: center;
-    }
-
-    th {
-        background-color: rgba(5, 102, 212, 0.7);
-    }
-
-    pre, .box {
-        text-align: center;
-        padding: 15px;
-        border-radius: 15px;
-        font-family: 'Times New Roman', Times, serif;
-        font-size: clamp(18px, 1.8vw, 24px);
-        font-weight: bolder;
-        white-space: pre-wrap;
-        overflow-x: auto;
-        background-color: rgba(0, 0, 0, 0.75); 
-        color: #ffffff;
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-        transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    pre:hover, .box:hover {
-        transform: translateY(-8px);
-        background-color: rgba(0, 0, 0, 0.9);
-        box-shadow: 0 12px 20px rgba(0, 0, 0, 0.8);
-    }
-
-    h1 {
-        text-align: center;
-        font-family: "Times New Roman", Times, serif;
-        font-size: clamp(32px, 4vw, 50px); 
-    }
-    
-    h2 {
-        font-size: clamp(26px, 3vw, 38px);
-    }
-
-    h3 {
-        font-size: clamp(22px, 2.5vw, 32px);
-    }
-
-    @keyframes pulseGlow {
-        0% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
-        50% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 20px rgba(5,102,212,1), 0 0 30px rgba(5,102,212,0.8); }
-        100% { text-shadow: 2px 2px 5px rgba(0,0,0,1), 0 0 10px rgba(5,102,212,0.4); }
-    }
-
-    .main-heading {
-        color: #ffffff;
-        background-color: rgba(0, 0, 0, 0.5);
-        padding: 10px;
-        border-radius: 10px;
-        display: inline-block;
-        width: 100%;
-        animation: pulseGlow 3s infinite alternate; 
-        transition: transform 0.3s ease;
-    }
-
-    .main-heading:hover {
-        transform: scale(1.02);
-    }
-
-    h2, h3 {
-        font-family: Arial, Helvetica, sans-serif;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
-        transition: color 0.3s ease;
-    }
-
-    .city {
-        background-color: rgba(0, 0, 0, 0.7);
-        color: white;
-        border: 2px solid rgba(255, 255, 255, 0.2);
-        border-radius: 20px;
-        margin: 20px 0;
-        padding: 20px;
-        backdrop-filter: blur(5px);
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .city:hover {
-        transform: translateY(-5px);
-        border-color: rgba(5, 102, 212, 0.8);
-    }
-
-    #myHeader, #myHeader1 {
-        background-color: rgba(5, 102, 212, 0.8);
-        color: white;
-        padding: 40px;
-        text-align: center;
-        border-radius: 15px;
-    }
-
-    .city1 {
-        background-color: rgba(255, 99, 71, 0.9);
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    a {
-        color: #66ccff;
-        font-weight: bold;
-        transition: color 0.3s ease, text-shadow 0.3s ease;
-    }
-    
-    a:hover {
-        color: #ffcc00;
-        text-shadow: 0 0 8px rgba(255, 204, 0, 0.8);
-    }
-
-    button, .testbtn {
-        background-color: #04AA6D;
-        color: white;
-        font-size: clamp(16px, 1.5vw, 22px);
-        padding: 12px 20px;
-        border: 2px solid white;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-        text-shadow: 1px 1px 2px black;
-        box-shadow: 0 4px 6px rgba(0,0,0,0.5);
-        transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    }
-
-    button:hover, .testbtn:hover {
-        background-color: #059862;
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 8px 15px rgba(0,0,0,0.6);
-    }
-
-    button:active {
-        transform: translateY(1px) scale(0.98);
-        box-shadow: 0 2px 4px rgba(0,0,0,0.5);
-    }
-
-    div {
-        border-radius: 20px;
-        padding: 10px;
-    }
-
-    .custom-header, .custom-footer, .navbar {
-        background-color: rgba(0, 0, 0, 0.8);
-        border: 2px solid rgba(5, 102, 212, 0.8);
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .navbar {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        padding: 10px;
-        position: sticky;
-        top: 0; 
-        z-index: 1000;
-        margin-bottom: 20px;
-    }
-
-    .navbar a {
-        color: white;
-        text-decoration: none;
-        padding: 5px 5px;
-        margin: 5px;
-        font-size: clamp(16px, 1.5vw, 20px);
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: rgba(5, 102, 212, 0.6);
-        border-radius: 5px;
-        transition: background-color 0.3s, transform 0.2s, box-shadow 0.3s;
-        text-shadow: none;
-    }
-
-    .navbar a:hover {
-        background-color: rgba(5, 102, 212, 1);
-        transform: translateY(-3px) scale(1.05);
-        box-shadow: 0 5px 15px rgba(5, 102, 212, 0.6);
-    }
-
-    @media screen and (max-width: 768px) {
-        table { font-size: 14px; }
-        th, td { padding: 8px; }
-        iframe { height: 300px; }
-        pre, .box { font-size: 16px; padding: 10px; }
-        h1 { font-size: 28px; }
-        h2 { font-size: 24px; }
-        h3 { font-size: 20px; }
-    }
-</style>
-<body >
+<body>
     
     <header class="custom-header">
         <h1 class="main-heading" style="margin: 0; color: white;">Welcome to Harsh Yadav's Web_Pages</h1>
@@ -311,7 +311,7 @@ it will format the HTML document according to the information in the style sheet
 There are three ways of inserting a style sheet:
 
 External CSS - link to an external .css file
-Internal CSS - use the "style>" element in the head section
+Internal CSS - use the "&lt;style&gt;" element in the head section
 Inline CSS - use the style attribute on HTML elements </strong></pre>
 <h3 style="color:MediumSeaGreen;">External CSS</h3><hr>
 <pre class="box">With an external style sheet, 
@@ -328,7 +328,7 @@ Here is how the "mystyle.css" file looks:</pre>
 <h3 style="color:MediumSeaGreen;">Internal CSS</h3><hr>
 <pre class="box">An internal style sheet may be used if one single HTML page has a unique style.
 
-The internal style is defined inside the style> element, inside the head section.</pre>
+The internal style is defined inside the "&lt;style&gt;" element, inside the head section.</pre>
 <h3 style="color:MediumSeaGreen;">Inline CSS</h3><hr>
 <pre class="box">
 An inline style may be used to apply a unique style for a single element.
@@ -355,18 +355,18 @@ The style attribute can contain any CSS property.
 Validate your CSS with a CSS linter or validator.
 Write CSS in small sections and test frequently.</pre><hr>
 <h1 class="main-heading">Image and Hyperlink Section Below:-</h1><hr>
-<img src="https://img.freepik.com/premium-vector/character-art-anime-style_961307-23577.jpg?w=360">
+<img src="https://img.freepik.com/premium-vector/character-art-anime-style_961307-23577.jpg?w=360" alt="Anime Style Art">
 <a href="https://www.animeworld.com">Visit Anime world</a>
 
-<img src="https://wallpapercave.com/uwp/uwp4477794.jpeg">
-<a href="https://wallpapercave.com/"  target="_blank">Visit WallpaperCave</a><br>
+<img src="https://wallpapercave.com/uwp/uwp4477794.jpeg" alt="Wallpaper Cave Art">
+<a href="https://wallpapercave.com/" target="_blank">Visit WallpaperCave</a><br>
 <hr>
 <h1 class="main-heading">HTML Clickable_Gif</h1><hr>
 <a href="https://hianimes.se/">
 <img src="https://i.pinimg.com/originals/26/93/a8/2693a8de43adf177b30f1ac3fb3b14e2.gif" alt="Anime tutorial">
 </a>
 <a href="https://kimetsu-no-yaiba.fandom.com/wiki/Kimetsu_no_Yaiba_Wiki">
-<img src="https://giffiles.alphacoders.com/221/221754.gif" style="max-height: 420px; object-fit: cover;"></a>
+<img src="https://giffiles.alphacoders.com/221/221754.gif" style="max-height: 420px; object-fit: cover;" alt="Kimetsu no Yaiba Gif"></a>
 <br>
 <h1 class="main-heading">HTML Table Practice</h1><hr>
 <table style="width:100%">
@@ -461,9 +461,9 @@ Write CSS in small sections and test frequently.</pre><hr>
 <br><hr>
 <h3 style="color:MediumSeaGreen;">Summary of HTML Description Lists</h3><hr>
 <pre class="box">
-    Use the HTML Dl> element to define a description list.
-    Use the HTML Dt> element to define the description term.
-    Use the HTML Dd> element to describe the term in a description list.
+    Use the HTML &lt;dl&gt; element to define a description list.
+    Use the HTML &lt;dt&gt; element to define the description term.
+    Use the HTML &lt;dd&gt; element to describe the term in a description list.
 </pre>
 <br>
 <hr>
@@ -511,7 +511,7 @@ Write CSS in small sections and test frequently.</pre><hr>
 <pre class="box">
     HTML elements can belong to more than one class.
 
-    To define multiple classes, separate the class names with a space, e.g. Div class="city main". 
+    To define multiple classes, separate the class names with a space, e.g. &lt;div class="city main"&gt;. 
     The element will be styled according to all the classes specified.
 
     In the following example, the first h2 element belongs to both the city class and also to the main class, 
@@ -703,7 +703,7 @@ function displayResult() {
 </form>
 <br><hr>
 <h1 class="main-heading">HTML Iframes</h1><hr>
-<iframe src="https://thumbs.dreamstime.com/b/anime-cartoon-character-male-vector-art-illustration-stylish-expressive-design-has-sharp-style-hair-bold-facial-384511590.jpg "  title="Anime Image"></iframe>
+<iframe src="https://thumbs.dreamstime.com/b/anime-cartoon-character-male-vector-art-illustration-stylish-expressive-design-has-sharp-style-hair-bold-facial-384511590.jpg"  title="Anime Image"></iframe>
 <iframe src="https://wallpapers.com/images/featured/nature-2ygv7ssy2k0lxlzu.jpg" style="border:10px solid rgba(32, 31, 31, 0.699);" title="Nature Image"></iframe>
 <br>
 <hr>
@@ -722,11 +722,11 @@ Click me to display Date and Time.</button>
 
 <pre id="demo" class="box"></pre>
 <br><hr>
-<h2 style="color:Tomato;">The HTML Script> Tag</h2>
+<h2 style="color:Tomato;">The HTML &lt;script&gt; Tag</h2>
 <pre class="box">
-    The HTML Script> tag is used to define a client-side script (JavaScript).
+    The HTML &lt;script&gt; tag is used to define a client-side script (JavaScript).
 
-    The Script> element either contains script statements, 
+    The &lt;script&gt; element either contains script statements, 
     or it points to an external script file through the src attribute.
 
     Common uses for JavaScript are image manipulation, form validation, 
@@ -784,7 +784,7 @@ function light(sw) {
 }
 </script>
 
-<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180">
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" width="100" height="180" alt="Bulb State">
 
 <p>
 <button type="button" onclick="light(1)">Light On</button>
@@ -796,7 +796,7 @@ function light(sw) {
 <h1 class="main-heading">Important HTML Head Summary Points To Look At...</h1><hr>
 <pre class="box">
 The |head> element is a container for metadata (data about data)...
-The |head> element is placed between the <html> tag and the <body> tag...
+The |head> element is placed between the &lt;html&gt; tag and the &lt;body&gt; tag...
 The |title> element is required and it defines the title of the document...
 The |style> element is used to define style information for a single document...
 The |link> tag is most often used to link to external style sheets...
